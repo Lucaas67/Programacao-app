@@ -1,0 +1,33 @@
+[
+    {
+      "author": "Albert Einstein",
+      "quote": "A imaginação é mais importante que o conhecimento.",
+      "image": "einstein.png"
+    },
+    {
+      "author": "Albert Einstein",
+      "quote": "A vida é como andar de bicicleta. Para manter o equilíbrio, você deve continuar se movendo.",
+      "image": "einstein.png"
+    },
+    {
+      "author": "Steve Jobs",
+      "quote": "Seu trabalho vai preencher uma grande parte da sua vida, e a única maneira de ficar realmente satisfeito é fazer o que você acredita ser um ótimo trabalho.",
+      "image": "stevejobs.png"
+    },
+    {
+      "author": "Steve Jobs",
+      "quote": "A inovação distingue um líder de um seguidor.",
+      "image": "stevejobs.png"
+    },
+    {
+      "author": "Mahatma Gandhi",
+      "quote": "Seja a mudança que você quer ver no mundo.",
+      "image": "gandhi.png"
+    },
+    {
+      "author": "Mahatma Gandhi",
+      "quote": "A força não provém da capacidade física, mas de uma vontade indomável.",
+      "image": "gandhi.png"
+    }
+  ]
+  
