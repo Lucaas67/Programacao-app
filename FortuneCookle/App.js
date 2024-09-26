@@ -25,13 +25,13 @@ const fortunes = [
 const App = () => {
   const [cookieOpened, setCookieOpened] = useState(false);
   const [fortune, setFortune] = useState('');
-  const scaleAnim = useRef(new Animated.Value(1)).current;  // Estado da animação de escala
+  const scaleAnim = useRef(new Animated.Value(1)).current;  
 
   const breakCookie = () => {
     // Animação de abrir o biscoito
     Animated.timing(scaleAnim, {
-      toValue: 1.5,  // Aumenta o tamanho do biscoito
-      duration: 500,  // Duração da animação em milissegundos
+      toValue: 1.5,  
+      duration: 500,  // Duração da animação 
       useNativeDriver: true,
     }).start(() => {
       // Após a animação, atualiza o estado do biscoito aberto e exibe a frase de sorte
@@ -44,7 +44,7 @@ const App = () => {
   const resetCookie = () => {
     setCookieOpened(false);
     setFortune('');
-    scaleAnim.setValue(1);  // Reseta a escala para o tamanho original
+    scaleAnim.setValue(1);  
   };
 
   return (
@@ -79,25 +79,25 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
     paddingHorizontal: 20,
-    paddingTop: 60,  // Ajuste de espaço para o título no topo
+    paddingTop: 60,  
   },
   title: {
-    fontSize: 32,  // Tamanho do título
+    fontSize: 32,  
     fontWeight: 'bold',
     textAlign: 'center',
-    marginBottom: 20,  // Espaço abaixo do título
+    marginBottom: 20,  
     color: '#333',
     position: 'absolute',
-    top: 40,  // Ajuste a posição para estar no topo
+    top: 40,  
   },
   cookieImage: {
     width: 250,
     height: 250,
-    borderRadius: 125,  // Borda arredondada para o biscoito
+    borderRadius: 125,  
     borderWidth: 4,
-    borderColor: '#FFD700',  // Cor dourada para o biscoito
-    marginBottom: 30,  // Aumenta o espaço abaixo da imagem do biscoito
-    shadowColor: '#000',  // Sombra para adicionar profundidade
+    borderColor: '#FFD700',  
+    marginBottom: 30,  
+    shadowColor: '#000',  
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.3,
     shadowRadius: 8,
@@ -105,9 +105,9 @@ const styles = StyleSheet.create({
   fortuneText: {
     fontSize: 22,
     color: '#333',
-    marginBottom: 30,  // Aumenta o espaço abaixo do texto da sorte
+    marginBottom: 30, 
     textAlign: 'center',
-    fontStyle: 'italic',  // Estilo itálico para dar um toque especial
+    fontStyle: 'italic',  //
 
   },
   buttonContainer: {

@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
 const ContadorRestauranteApp = () => {
-  const [count, setCount] = useState(0); // Estado para armazenar o número de pessoas
+  const [count, setCount] = useState(0); //Armazenamento do número de pessoas
 
   // Função para incrementar o número de pessoas
   const increment = () => {
     setCount(count + 1);
   };
 
-  // Função para decrementar o número de pessoas
+  // Função para diminiuir o número de pessoas
   const decrement = () => {
     if (count > 0) {
       setCount(count - 1);
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    paddingTop: 50, // Adicionando espaço para o título no topo
+    paddingTop: 50, 
     backgroundColor: '#f0f0f0',
   },
   title: {
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#333',
     position: 'absolute',
-    top: 40, // Posição do título no topo
+    top: 40, 
     textAlign: 'center',
   },
   countText: {
