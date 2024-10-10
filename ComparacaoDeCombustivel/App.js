@@ -65,7 +65,7 @@ const App = () => {
       {resultado ? <Text style={styles.resultado}>{resultado}</Text> : null}
 
       <Image
-        source={imagem} // Usa a imagem atual do estado
+        source={imagem}
         style={imagem === imagemInicial ? styles.imagemInicial : styles.imagemCombustivel}
       />
 
@@ -89,23 +89,23 @@ const styles = StyleSheet.create({
   titulo: {
     fontSize: 30,
     marginBottom: 20,
-    color: '#2c3e50', // Cor do texto do título
+    color: '#2c3e50', 
     fontWeight: 'bold',
   },
   input: {
     height: 50,
-    borderColor: '#3498db', // Cor da borda
+    borderColor: '#3498db', 
     borderWidth: 2,
     marginBottom: 20,
     paddingHorizontal: 10,
     width: '100%',
-    borderRadius: 5, // Bordas arredondadas
+    borderRadius: 5, 
   },
   resultado: {
     fontSize: 22,
     marginTop: 20,
     fontWeight: 'bold',
-    color: '#27ae60', // Cor do resultado
+    color: '#27ae60', 
   },
   imagemInicial: {
     marginTop: 20,
@@ -118,15 +118,15 @@ const styles = StyleSheet.create({
     height: 200,
   },
   button: {
-    backgroundColor: '#3498db', // Cor do botão
+    backgroundColor: '#3498db', 
     padding: 15,
-    borderRadius: 5, // Bordas arredondadas
+    borderRadius: 5, 
     marginVertical: 10,
     width: '100%',
-    alignItems: 'center', // Centraliza o texto do botão
+    alignItems: 'center', 
   },
   buttonText: {
-    color: '#ffffff', // Cor do texto do botão
+    color: '#ffffff', 
     fontSize: 18,
     fontWeight: 'bold',
   },

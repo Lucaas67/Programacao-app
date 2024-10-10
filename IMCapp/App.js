@@ -5,8 +5,8 @@ const App = () => {
   const [peso, setPeso] = useState('');
   const [altura, setAltura] = useState('');
   const [resultado, setResultado] = useState('');
-  const [imagem, setImagem] = useState(null); // Sem imagem padrão
-  const [isObesidade, setIsObesidade] = useState(false); // Estado para verificar se é obesidade
+  const [imagem, setImagem] = useState(null); 
+  const [isObesidade, setIsObesidade] = useState(false); 
 
   const calcularIMC = () => {
     const pesoNum = parseFloat(peso);
@@ -34,16 +34,16 @@ const App = () => {
     } else if (imc >= 30 && imc < 39.9) {
       classificacao = 'Obesidade';
       imagemClassificacao = require('./assets/obesidade2.jpg'); 
-      obesidade = true; // Definir como "Obesidade"
+      obesidade = true; 
     } else {
       classificacao = 'Obesidade grave';
       imagemClassificacao = require('./assets/obesidade-extrema.jpg'); 
-      obesidade = true; // Definir como "Obesidade"
+      obesidade = true; 
     }
 
     setResultado(`IMC: ${imc.toFixed(2)} - ${classificacao}`);
-    setImagem(imagemClassificacao); // Atualizar a imagem com base na classificação
-    setIsObesidade(obesidade); // Define se é obesidade para controlar o tamanho da imagem
+    setImagem(imagemClassificacao); // Atualizar a imagem 
+    setIsObesidade(obesidade); 
   };
 
   const resetar = () => {
@@ -51,7 +51,7 @@ const App = () => {
     setAltura('');
     setResultado('');
     setImagem(null); // Remover imagem após resetar
-    setIsObesidade(false); // Voltar ao estado padrão (não obesidade)
+    setIsObesidade(false); 
   };
 
   return (
@@ -82,10 +82,10 @@ const App = () => {
         <Text style={styles.buttonText}>Calcular IMC</Text>
       </TouchableOpacity>
 
-      {/* Exibe o resultado do cálculo */}
+      
       <Text style={styles.resultado}>{resultado}</Text>
 
-      {/* Botão para resetar o app */}
+      
       <TouchableOpacity style={styles.buttonResetar} onPress={resetar}>
         <Text style={styles.buttonText}>Resetar</Text>
       </TouchableOpacity>
@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
-    backgroundColor: '#f0f4f8',  // Fundo cinza claro para suavizar o visual
+    backgroundColor: '#f0f4f8',  
   },
   title: {
     fontSize: 28,
@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     resizeMode: 'contain',
   },
-  imageObesidade: { // Tamanho maior para obesidade
+  imageObesidade: { 
     width: 250,
     height: 300,
     marginBottom: 20,
@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   buttonCalcular: {
-    backgroundColor: '#00aaff', // Cor azul para o botão de calcular
+    backgroundColor: '#00aaff', 
     paddingVertical: 12,
     paddingHorizontal: 30,
     borderRadius: 10,
@@ -145,7 +145,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   buttonResetar: {
-    backgroundColor: '#ff6666', // Cor vermelha para o botão de resetar
+    backgroundColor: '#ff6666', 
     paddingVertical: 12,
     paddingHorizontal: 30,
     borderRadius: 10,
