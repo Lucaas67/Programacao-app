@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Button, Image } from 'react-native';
 
-// Importe as imagens da pasta assets
 const pedra = require('./assets/pedra.png');
 const papel = require('./assets/papel.png');
 const tesoura = require('./assets/tesoura.png');
@@ -43,7 +42,7 @@ const App = () => {
     setEscolhaUsuario('');
     setEscolhaApp('');
     setResultado('');
-    setJogarHabilitado(false); // Reseta o estado do botão "Jogar"
+    setJogarHabilitado(false); 
   };
 
   return (
@@ -113,8 +112,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff',
     padding: 10,
     borderRadius: 10,
-    elevation: 5, // sombra no Android
-    shadowColor: '#000', // sombra no iOS
+    elevation: 5, 
+    shadowColor: '#000', 
     shadowOffset: { width: 2, height: 2 },
     shadowOpacity: 0.3,
     shadowRadius: 2,
