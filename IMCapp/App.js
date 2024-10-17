@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
   },
   input: {
     height: 50,
-    borderColor: '#00aaff',
+    borderColor: 'blue',
     borderWidth: 2,
     width: '80%',
     marginBottom: 15,
@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   buttonCalcular: {
-    backgroundColor: '#00aaff', 
+    backgroundColor: 'blue', 
     paddingVertical: 12,
     paddingHorizontal: 30,
     borderRadius: 10,
