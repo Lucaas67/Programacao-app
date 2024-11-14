@@ -15,6 +15,21 @@ const About = () => {
   );
 };
 
+const AboutRoute = ({route}) => {
+  const navigation = useNavigation();
+
+  const {name, email} = route.params;
+
+  return (
+    <View style={styles.container}>
+      <Text>About Screen</Text>
+      <Button title="Go to Detail" onPress={() => navigation.pop()} />
+      <Text>Name: {name} </Text>
+      <Text> Email: {email} </Text>
+    </View>
+  );
+};
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -24,5 +39,5 @@ const styles = StyleSheet.create({
   },
 });
 
-export default About;
+export default About; AboutRoute;
 
