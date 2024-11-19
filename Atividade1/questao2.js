@@ -2,7 +2,6 @@
 
 function converterTemperatura(valor, unidadeOrigem, unidadeDestino) {
     let resultado;
-
     
     switch (unidadeOrigem.toLowerCase()) {
         case 'celsius':
