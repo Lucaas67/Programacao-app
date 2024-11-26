@@ -5,6 +5,7 @@ import HomeScreen from './src/screens/HomeScreen';
 import NewEntry from './src/screens/NewEntry';
 import ChartScreen from './src/screens/ChartScreen';
 import HistoryScreen from './src/screens/HistoryScreen'; // Importar a nova tela
+import EditEntryScreen from './src/screens/EditEntryScreen';
 
 const Stack = createStackNavigator();
 
@@ -31,6 +32,11 @@ export default function App() {
           name="HistoryScreen"
           component={HistoryScreen}
           options={{ title: 'Histórico' }}
+        />
+        <Stack.Screen
+          name="EditEntryScreen"
+          component={EditEntryScreen}
+          options={{ title: 'Editar' }}
         />
       </Stack.Navigator>
     </NavigationContainer>
