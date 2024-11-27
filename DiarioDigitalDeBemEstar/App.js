@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './src/screens/HomeScreen';
 import NewEntry from './src/screens/NewEntry';
-import ChartScreen from './src/screens/ChartScreen';
+import RemindersScreen from './src/screens/RemindersScreen';
 import HistoryScreen from './src/screens/HistoryScreen'; // Importar a nova tela
 import EditEntryScreen from './src/screens/EditEntryScreen';
 
@@ -21,22 +21,22 @@ export default function App() {
         <Stack.Screen
           name="NewEntry"
           component={NewEntry}
-          options={{ title: 'Nova Entrada' }}
-        />
-        <Stack.Screen
-          name="ChartScreen"
-          component={ChartScreen}
-          options={{ title: 'Gráfico Semanal' }}
+          options={{ title: 'Criar Post' }}
         />
         <Stack.Screen
           name="HistoryScreen"
           component={HistoryScreen}
-          options={{ title: 'Histórico' }}
+          options={{ title: 'Diário' }}
         />
         <Stack.Screen
           name="EditEntryScreen"
           component={EditEntryScreen}
           options={{ title: 'Editar' }}
+        />
+        <Stack.Screen
+          name="RemindersScreen"
+          component={RemindersScreen}
+          options={{ title: 'Lembretes' }}
         />
       </Stack.Navigator>
     </NavigationContainer>

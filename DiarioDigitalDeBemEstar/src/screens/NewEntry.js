@@ -36,7 +36,7 @@ export default function NewEntryScreen({ navigation }) {
 
   return (
     <KeyboardAvoidingView style={styles.container} behavior="height">
-      <Text style={styles.title}>Nova Entrada no Diário</Text>
+      <Text style={styles.title}>Crie um post no seu Diário</Text>
 
       <Text style={styles.label}>Como você está se sentindo hoje?</Text>
       <TextInput
