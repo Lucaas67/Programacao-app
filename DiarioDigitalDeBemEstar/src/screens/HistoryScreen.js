@@ -57,8 +57,8 @@ export default function HistoryScreen({ navigation }) {
         <TouchableOpacity onPress={() => navigation.navigate('NewEntry')}>
           <Text style={styles.headerButton}>Nova Entrada</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('ChartScreen')}>
-          <Text style={styles.headerButton}>Gráfico Semanal</Text>
+        <TouchableOpacity onPress={() => navigation.navigate('HistoryScreen')}>
+          <Text style={styles.headerButton}>Meu Diário</Text>
         </TouchableOpacity>
       </View>
 

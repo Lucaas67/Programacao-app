@@ -3,7 +3,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './src/screens/HomeScreen';
 import NewEntry from './src/screens/NewEntry';
-import RemindersScreen from './src/screens/RemindersScreen';
 import HistoryScreen from './src/screens/HistoryScreen'; // Importar a nova tela
 import EditEntryScreen from './src/screens/EditEntryScreen';
 
@@ -21,7 +20,7 @@ export default function App() {
         <Stack.Screen
           name="NewEntry"
           component={NewEntry}
-          options={{ title: 'Criar Post' }}
+          options={{ title: 'Criar entrada' }}
         />
         <Stack.Screen
           name="HistoryScreen"
@@ -32,11 +31,6 @@ export default function App() {
           name="EditEntryScreen"
           component={EditEntryScreen}
           options={{ title: 'Editar' }}
-        />
-        <Stack.Screen
-          name="RemindersScreen"
-          component={RemindersScreen}
-          options={{ title: 'Lembretes' }}
         />
       </Stack.Navigator>
     </NavigationContainer>

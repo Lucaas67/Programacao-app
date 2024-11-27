@@ -55,7 +55,7 @@ export default function HistoryScreen({ navigation }) {
     <View style={{ flex: 1 }}>
       {/* Header */}
       <View style={styles.header}>
-        <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Home')}>
           <Text style={styles.headerButton}>Home</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate('NewEntry')}>
@@ -63,9 +63,6 @@ export default function HistoryScreen({ navigation }) {
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate('HistoryScreen')}>
           <Text style={styles.headerButton}>Meu Diário</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('RemindersScreen')}>
-          <Text style={styles.headerButton}>Lembretes</Text>
         </TouchableOpacity>
       </View>
 
