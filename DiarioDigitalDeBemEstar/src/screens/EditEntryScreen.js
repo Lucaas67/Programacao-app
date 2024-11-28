@@ -3,14 +3,14 @@
     import AsyncStorage from '@react-native-async-storage/async-storage';
 
     export default function EditEntryScreen({ route, navigation }) {
-    const { entry, index } = route.params; // Recebe os dados da entrada selecionada
+    const { entry, index } = route.params; 
     const [mood, setMood] = useState(entry.mood);
     const [note, setNote] = useState(entry.note);
 
     const saveEditedEntry = async () => {
         const data = await AsyncStorage.getItem('@diary_entries');
         const entries = data ? JSON.parse(data) : [];
-        entries[index] = { ...entry, mood, note }; // Atualiza apenas a entrada editada
+        entries[index] = { ...entry, mood, note }; 
         await AsyncStorage.setItem('@diary_entries', JSON.stringify(entries));
         navigation.goBack();
     };

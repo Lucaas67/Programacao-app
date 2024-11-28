@@ -8,52 +8,46 @@ export default function HistoryScreen({ navigation }) {
   const [markedDates, setMarkedDates] = useState({});
   const [today, setToday] = useState('');
 
-  // Carregar dias importantes do AsyncStorage
   const fetchMarkedDates = async () => {
     const data = await AsyncStorage.getItem('@marked_dates');
     const storedDates = data ? JSON.parse(data) : {};
     setMarkedDates(storedDates);
   };
 
-  // Salvar dias importantes no AsyncStorage
   const saveMarkedDates = async (dates) => {
     await AsyncStorage.setItem('@marked_dates', JSON.stringify(dates));
   };
 
-  // Marcar ou desmarcar dias importantes
   const toggleDay = (day) => {
     const updatedDates = { ...markedDates };
     if (updatedDates[day]) {
-      delete updatedDates[day]; // Remove o dia se já estiver marcado
+      delete updatedDates[day]; 
       Alert.alert('Dia removido dos importantes', `Dia ${day} foi desmarcado.`);
     } else {
-      updatedDates[day] = { marked: true, dotColor: '#ff6347' }; // Marca o dia
+      updatedDates[day] = { marked: true, dotColor: '#ff6347' }; 
       Alert.alert('Dia marcado como importante', `Dia ${day} foi marcado.`);
     }
     setMarkedDates(updatedDates);
     saveMarkedDates(updatedDates);
   };
 
-  // Atualiza a data de hoje com o fuso horário de Brasília
   useEffect(() => {
     const currentDate = moment.tz('America/Sao_Paulo').format('YYYY-MM-DD');
     setToday(currentDate);
-    fetchMarkedDates(); // Carrega os dias importantes
+    fetchMarkedDates();
   }, [navigation]);
 
-  // Combinar marcações para o dia de hoje
   const combinedMarkedDates = {
     ...markedDates,
     [today]: {
       ...(markedDates[today] || {}),
       selected: true,
-      selectedColor: '#32cd32', // Cor do círculo para hoje
+      selectedColor: '#32cd32', 
     },
   };
 
   return (
     <View style={{ flex: 1 }}>
-      {/* Header */}
       <View style={styles.header}>
         <TouchableOpacity onPress={() => navigation.navigate('Home')}>
           <Text style={styles.headerButton}>Home</Text>
@@ -66,7 +60,6 @@ export default function HistoryScreen({ navigation }) {
         </TouchableOpacity>
       </View>
 
-      {/* Calendário */}
       <View style={styles.container}>
         <Calendar
           markedDates={combinedMarkedDates}

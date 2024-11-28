@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './src/screens/HomeScreen';
 import NewEntry from './src/screens/NewEntry';
-import HistoryScreen from './src/screens/HistoryScreen'; // Importar a nova tela
+import HistoryScreen from './src/screens/HistoryScreen'; 
 import EditEntryScreen from './src/screens/EditEntryScreen';
 
 const Stack = createStackNavigator();

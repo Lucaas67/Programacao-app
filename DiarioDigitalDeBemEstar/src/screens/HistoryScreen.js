@@ -5,13 +5,11 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 export default function HistoryScreen({ navigation }) {
   const [entries, setEntries] = useState([]);
 
-  // Função para carregar os dados do AsyncStorage
   const fetchEntries = async () => {
     const data = await AsyncStorage.getItem('@diary_entries');
     setEntries(data ? JSON.parse(data) : []);
   };
 
-  // Atualiza os dados quando a tela é focada
   useEffect(() => {
     const unsubscribe = navigation.addListener('focus', () => {
       fetchEntries();
@@ -19,7 +17,6 @@ export default function HistoryScreen({ navigation }) {
     return unsubscribe;
   }, [navigation]);
 
-  // Função para deletar uma entrada
   const deleteEntry = (index) => {
     Alert.alert(
       "Deletar Entrada",
@@ -33,23 +30,22 @@ export default function HistoryScreen({ navigation }) {
           text: "Deletar",
           onPress: async () => {
             const updatedEntries = [...entries];
-            updatedEntries.splice(index, 1); // Remove o item do array
+            updatedEntries.splice(index, 1); 
             await AsyncStorage.setItem('@diary_entries', JSON.stringify(updatedEntries));
-            setEntries(updatedEntries); // Atualiza a lista de entradas
+            setEntries(updatedEntries); 
           },
         },
       ]
     );
   };
 
-  // Função para editar uma entrada
+
   const editEntry = (entry, index) => {
-    navigation.navigate('EditEntryScreen', { entry, index }); // Passa a entrada selecionada e o índice para a tela de edição
+    navigation.navigate('EditEntryScreen', { entry, index }); 
   };
 
   return (
     <View style={{ flex: 1 }}>
-      {/* Header */}
       <View style={styles.header}>
         <TouchableOpacity onPress={() => navigation.navigate('Home')}>
           <Text style={styles.headerButton}>Home</Text>
@@ -62,7 +58,6 @@ export default function HistoryScreen({ navigation }) {
         </TouchableOpacity>
       </View>
 
-      {/* Main Content */}
       <View style={styles.container}>
         <FlatList
           data={entries}
@@ -73,7 +68,6 @@ export default function HistoryScreen({ navigation }) {
               <Text style={styles.cardMood}>Humor: {item.mood}</Text>
               <Text style={styles.cardNote}>{item.note}</Text>
 
-              {/* Botões de Editar e Deletar */}
               <View style={styles.cardActions}>
                 <TouchableOpacity
                   style={styles.editButton}

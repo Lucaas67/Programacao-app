@@ -19,7 +19,7 @@ export default function NewEntryScreen({ navigation }) {
   const handlePressIn = () => {
     Animated.timing(scaleAnim, {
       toValue: 0.95,
-      duration: 150,
+      duration: 600,
       useNativeDriver: true,
       easing: Easing.out(Easing.quad),
     }).start();
@@ -28,7 +28,7 @@ export default function NewEntryScreen({ navigation }) {
   const handlePressOut = () => {
     Animated.timing(scaleAnim, {
       toValue: 1,
-      duration: 150,
+      duration: 600,
       useNativeDriver: true,
       easing: Easing.out(Easing.quad),
     }).start(() => saveEntry());
